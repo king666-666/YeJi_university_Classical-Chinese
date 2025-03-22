@@ -21,12 +21,6 @@
       font-size: 1.2em;
       margin: 20px 0;
     }
-    img {
-      width: 200px;
-      height: auto;
-      border-radius: 50%;
-      margin-top: 20px;
-    }
     .container {
       max-width: 800px;
       margin: 0 auto;
@@ -39,13 +33,26 @@
       margin-top: 30px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>欢迎来到野鸡大学</h1>
     <p>全球最自由、最离谱的大学！</p>
-    <img src="0.webp" alt="野鸡大学标志">
+    <div class="image-container">
+      <img src="0.webp" alt="野鸡大学标志">
+    </div>
   </div>
 
   <!-- 野鸡大学历史 -->
