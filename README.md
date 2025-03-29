@@ -1,6 +1,6 @@
 # 东方文理大学 (ELAU)
 
-![ELAU Logo](_logo_image_.jfif)  
+![ELAU Logo](_logo_image_.jpg)  
 *明德至善 博学创新*
 
 ## 目录
