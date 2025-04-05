@@ -5,6 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>东方文理大学 (ELAU)</title>
     <style>
+        /* 开始页面样式 */
+        #start-page {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a5276, #2980b9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            z-index: 1000;
+            transition: opacity 1s ease-out;
+        }
+        
+        #start-page.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        #start-page h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        #start-page p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            text-align: center;
+            line-height: 1.6;
+        }
+        
+        #enter-btn {
+            padding: 12px 30px;
+            background-color: white;
+            color: #1a5276;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        #enter-btn:hover {
+            background-color: #f1c40f;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+        
+        /* 主页面样式 */
         body {
             font-family: 'Microsoft YaHei', sans-serif;
             line-height: 1.6;
@@ -13,55 +68,67 @@
             margin: 0 auto;
             padding: 20px;
         }
+        
         header {
             text-align: center;
             margin-bottom: 30px;
         }
+        
         .logo {
             max-width: 200px;
             margin: 20px auto;
         }
+        
         h1, h2, h3 {
             color: #1a5276;
         }
+        
         h2 {
             border-bottom: 2px solid #1a5276;
             padding-bottom: 5px;
             margin-top: 30px;
         }
+        
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
         }
+        
         th, td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
         }
+        
         th {
             background-color: #f2f2f2;
         }
+        
         .nav {
             background-color: #f8f9fa;
             padding: 15px;
             border-radius: 5px;
             margin-bottom: 30px;
         }
+        
         .nav a {
             margin-right: 15px;
             text-decoration: none;
             color: #1a5276;
         }
+        
         .nav a:hover {
             text-decoration: underline;
         }
+        
         .back-to-top {
             display: block;
             text-align: right;
             margin-top: 20px;
             font-size: 0.9em;
         }
+        
         footer {
             text-align: center;
             margin-top: 50px;
@@ -70,6 +137,7 @@
             font-size: 0.9em;
             color: #666;
         }
+        
         .highlight {
             background-color: #f8f9fa;
             padding: 20px;
@@ -79,185 +147,222 @@
     </style>
 </head>
 <body>
-    <header>
-        <img src="images/logo.jpg" alt="ELAU Logo" class="logo">
-        <h1>东方文理大学 (ELAU)</h1>
-        <p><em>明德至善 博学创新</em></p>
-    </header>
-
-    <div class="nav">
-        <h2>快速导航</h2>
-        <a href="#intro">学校简介</a>
-        <a href="#history">历史沿革</a>
-        <a href="#disciplines">学科设置</a>
-        <a href="#admission">招生信息</a>
-        <a href="#campus">校园生活</a>
-        <a href="#contact">联系我们</a>
+    <!-- 开始页面 -->
+    <div id="start-page">
+        <h1>欢迎来到东方文理大学</h1>
+        <p>探索千年学府的智慧传承，开启火星新校区的未来之旅</p>
+        <button id="enter-btn">进入官网</button>
     </div>
 
-    <section id="intro">
-        <h2>学校简介</h2>
-        <p>东方文理大学(ELAU)创建于1145年，是一所综合性研究型大学。学校坐落于火星海东市，占地面积200000000余亩，现有在校生25,000余人。</p>
-        
-        <div class="highlight">
-            <h3>办学特色：</h3>
-            <ul>
-                <li>🎓 文理并重的教育理念</li>
-                <li>🌍 国际化办学视野</li>
-                <li>🔬 注重创新实践能力培养</li>
-            </ul>
-        </div>
-        <a href="#" class="back-to-top">返回顶部</a>
-    </section>
+    <!-- 主页面内容 -->
+    <div id="main-content" style="display:none;">
+        <header>
+            <img src="images/logo.jpg" alt="ELAU Logo" class="logo">
+            <h1>东方文理大学 (ELAU)</h1>
+            <p><em>明德至善 博学创新</em></p>
+        </header>
 
-    <section id="history">
-        <h2>历史沿革</h2>
-        <table>
-            <tr>
-                <th>时期</th>
-                <th>重要事件</th>
-            </tr>
-            <tr>
-                <td>1145</td>
-                <td>建校，初名"东海文理学院"</td>
-            </tr>
-            <tr>
-                <td>1234</td>
-                <td>遭遇天下大乱，原址被毁</td>
-            </tr>
-            <tr>
-                <td>1451</td>
-                <td>搬至太平洋的岛上</td>
-            </tr>
-            <tr>
-                <td>1888</td>
-                <td>拿破仑被誉为我校最杰出校友之一</td>
-            </tr>
-            <tr>
-                <td>1937</td>
-                <td>抗战西迁，坚持办学</td>
-            </tr>
-            <tr>
-                <td>1952</td>
-                <td>院系调整，更名"东方文理学院"</td>
-            </tr>
-            <tr>
-                <td>1995</td>
-                <td>升格为"东方文理大学"</td>
-            </tr>
-            <tr>
-                <td>2010</td>
-                <td>入选国家"双一流"建设高校</td>
-            </tr>
-            <tr>
-                <td>2019</td>
-                <td>搬至火星新校区，并建城市名为海东市</td>
-            </tr>
-            <tr>
-                <td>2025</td>
-                <td>记录的学校诺比尔奖得主共有1145位</td>
-            </tr>
-        </table>
-        <a href="#" class="back-to-top">返回顶部</a>
-    </section>
+        <div class="nav">
+            <h2>快速导航</h2>
+            <a href="#intro">学校简介</a>
+            <a href="#history">历史沿革</a>
+            <a href="#disciplines">学科设置</a>
+            <a href="#admission">招生信息</a>
+            <a href="#campus">校园生活</a>
+            <a href="#contact">联系我们</a>
+        </div>
 
-    <section id="disciplines">
-        <h2>学科设置</h2>
-        <h3>优势学科群</h3>
-        
-        <div class="highlight">
-            <h4>1. 人文学科</h4>
-            <ul>
-                <li>国学研究院</li>
-                <li>外国语言文学</li>
-                <li>历史考古学</li>
-                <li>宇宙历史研究学科</li>
-            </ul>
-        </div>
-        
-        <div class="highlight">
-            <h4>2. 理学与工程</h4>
-            <ul>
-                <li>数学与应用数学</li>
-                <li>环境科学与工程</li>
-                <li>人工智能</li>
-                <li>火箭建造与发射</li>
-                <li>太空学</li>
-                <li>太空种植学</li>
-            </ul>
-        </div>
-        
-        <div class="highlight">
-            <h4>3. 艺术与设计</h4>
-            <ul>
-                <li>数字媒体艺术</li>
-                <li>音乐表演</li>
-                <li>视觉传达设计</li>
-            </ul>
-        </div>
-        <a href="#" class="back-to-top">返回顶部</a>
-    </section>
-
-    <section id="admission">
-        <h2>招生信息</h2>
-        <h3>2025年本科招生计划：</h3>
-        <ul>
-            <li>招生人数：3,200人</li>
-            <li>招生批次：第一批次</li>
-            <li>特色项目：
+        <section id="intro">
+            <h2>学校简介</h2>
+            <p>东方文理大学(ELAU)创建于1145年，是一所综合性研究型大学。学校坐落于火星海东市，占地面积200000000余亩，现有在校生25,000余人。</p>
+            
+            <div class="highlight">
+                <h3>办学特色：</h3>
                 <ul>
-                    <li>"启明计划"实验班</li>
-                    <li>本硕博贯通培养项目</li>
+                    <li>🎓 文理并重的教育理念</li>
+                    <li>🌍 国际化办学视野</li>
+                    <li>🔬 注重创新实践能力培养</li>
                 </ul>
-            </li>
-        </ul>
+            </div>
+            <a href="#" class="back-to-top">返回顶部</a>
+        </section>
+
+        <section id="history">
+            <h2>历史沿革</h2>
+            <table>
+                <tr>
+                    <th>时期</th>
+                    <th>重要事件</th>
+                </tr>
+                <tr>
+                    <td>1145</td>
+                    <td>建校，初名"东海文理学院"</td>
+                </tr>
+                <tr>
+                    <td>1234</td>
+                    <td>遭遇天下大乱，原址被毁</td>
+                </tr>
+                <tr>
+                    <td>1451</td>
+                    <td>搬至太平洋的岛上</td>
+                </tr>
+                <tr>
+                    <td>1888</td>
+                    <td>拿破仑被誉为我校最杰出校友之一</td>
+                </tr>
+                <tr>
+                    <td>1937</td>
+                    <td>抗战西迁，坚持办学</td>
+                </tr>
+                <tr>
+                    <td>1952</td>
+                    <td>院系调整，更名"东方文理学院"</td>
+                </tr>
+                <tr>
+                    <td>1995</td>
+                    <td>升格为"东方文理大学"</td>
+                </tr>
+                <tr>
+                    <td>2010</td>
+                    <td>入选国家"双一流"建设高校</td>
+                </tr>
+                <tr>
+                    <td>2019</td>
+                    <td>搬至火星新校区，并建城市名为海东市</td>
+                </tr>
+                <tr>
+                    <td>2025</td>
+                    <td>记录的学校诺比尔奖得主共有1145位</td>
+                </tr>
+            </table>
+            <a href="#" class="back-to-top">返回顶部</a>
+        </section>
+
+        <section id="disciplines">
+            <h2>学科设置</h2>
+            <h3>优势学科群</h3>
+            
+            <div class="highlight">
+                <h4>1. 人文学科</h4>
+                <ul>
+                    <li>国学研究院</li>
+                    <li>外国语言文学</li>
+                    <li>历史考古学</li>
+                    <li>宇宙历史研究学科</li>
+                </ul>
+            </div>
+            
+            <div class="highlight">
+                <h4>2. 理学与工程</h4>
+                <ul>
+                    <li>数学与应用数学</li>
+                    <li>环境科学与工程</li>
+                    <li>人工智能</li>
+                    <li>火箭建造与发射</li>
+                    <li>太空学</li>
+                    <li>太空种植学</li>
+                </ul>
+            </div>
+            
+            <div class="highlight">
+                <h4>3. 艺术与设计</h4>
+                <ul>
+                    <li>数字媒体艺术</li>
+                    <li>音乐表演</li>
+                    <li>视觉传达设计</li>
+                </ul>
+            </div>
+            <a href="#" class="back-to-top">返回顶部</a>
+        </section>
+
+        <section id="admission">
+            <h2>招生信息</h2>
+            <h3>2025年本科招生计划：</h3>
+            <ul>
+                <li>招生人数：3,200人</li>
+                <li>招生批次：第一批次</li>
+                <li>特色项目：
+                    <ul>
+                        <li>"启明计划"实验班</li>
+                        <li>本硕博贯通培养项目</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <div class="highlight">
+                <h3>奖学金：</h3>
+                <ul>
+                    <li>新生奖学金（最高500块）</li>
+                    <li>学业优秀奖学金（最高200万）</li>
+                    <li>专项竞赛奖学金（最高200亿）</li>
+                </ul>
+            </div>
+            <a href="#" class="back-to-top">返回顶部</a>
+        </section>
+
+        <section id="campus">
+            <h2>校园生活</h2>
+            <div class="highlight">
+                <h3>特色活动：</h3>
+                <ul>
+                    <li>百年讲堂系列讲座</li>
+                    <li>国际文化节</li>
+                    <li>科技创新大赛</li>
+                </ul>
+            </div>
+            
+            <div class="highlight">
+                <h3>生活设施：</h3>
+                <ul>
+                    <li>现代化图书馆（藏书突破2亿册）</li>
+                    <li>远超世界最好的体育场馆</li>
+                    <li>学生智能活动中心</li>
+                </ul>
+            </div>
+            <a href="#" class="back-to-top">返回顶部</a>
+        </section>
+
+        <section id="contact">
+            <h2>联系我们</h2>
+            <div class="highlight">
+                <p>📞 招生热线：400-160-1958</p>
+                <p>📧 邮箱：<a href="mailto:admission@elau.edu.cn">admission@elau.edu.cn</a></p>
+                <p>🌐 官网：<a href="http://www.elau.edu.cn" target="_blank">www.elau.edu.cn</a></p>
+                <p>📍 地址：火星海东市文昌区大学路1号</p>
+            </div>
+            <a href="#" class="back-to-top">返回顶部</a>
+        </section>
+
+        <footer>
+            <p>© 2025 东方文理大学招生办公室</p>
+        </footer>
+    </div>
+
+    <script>
+        // 点击进入按钮后的效果
+        document.getElementById('enter-btn').addEventListener('click', function() {
+            // 淡出开始页面
+            document.getElementById('start-page').classList.add('hidden');
+            
+            // 显示主页面
+            document.getElementById('main-content').style.display = 'block';
+            
+            // 滚动到顶部
+            window.scrollTo(0, 0);
+            
+            // 3秒后完全移除开始页面（可选）
+            setTimeout(function() {
+                document.getElementById('start-page').style.display = 'none';
+            }, 1000);
+        });
         
-        <div class="highlight">
-            <h3>奖学金：</h3>
-            <ul>
-                <li>新生奖学金（最高500块）</li>
-                <li>学业优秀奖学金（最高200万）</li>
-                <li>专项竞赛奖学金（最高200亿）</li>
-            </ul>
-        </div>
-        <a href="#" class="back-to-top">返回顶部</a>
-    </section>
-
-    <section id="campus">
-        <h2>校园生活</h2>
-        <div class="highlight">
-            <h3>特色活动：</h3>
-            <ul>
-                <li>百年讲堂系列讲座</li>
-                <li>国际文化节</li>
-                <li>科技创新大赛</li>
-            </ul>
-        </div>
-        
-        <div class="highlight">
-            <h3>生活设施：</h3>
-            <ul>
-                <li>现代化图书馆（藏书突破2亿册）</li>
-                <li>远超世界最好的体育场馆</li>
-                <li>学生智能活动中心</li>
-            </ul>
-        </div>
-        <a href="#" class="back-to-top">返回顶部</a>
-    </section>
-
-    <section id="contact">
-        <h2>联系我们</h2>
-        <div class="highlight">
-            <p>📞 招生热线：400-160-1958</p>
-            <p>📧 邮箱：<a href="mailto:admission@elau.edu.cn">admission@elau.edu.cn</a></p>
-            <p>🌐 官网：<a href="http://www.elau.edu.cn" target="_blank">www.elau.edu.cn</a></p>
-            <p>📍 地址：火星海东市文昌区大学路1号</p>
-        </div>
-        <a href="#" class="back-to-top">返回顶部</a>
-    </section>
-
-    <footer>
-        <p>© 2025 东方文理大学招生办公室</p>
-    </footer>
+        // 如果用户直接刷新页面，检查是否已经进入过主页面
+        window.addEventListener('load', function() {
+            if(window.location.hash === '#entered') {
+                document.getElementById('start-page').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }
+        });
+    </script>
 </body>
 </html>
