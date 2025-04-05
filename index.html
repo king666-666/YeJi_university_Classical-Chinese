@@ -29,7 +29,7 @@
         #start-page h1 {
             font-size: 4rem;
             margin-bottom: 20px;
-            color: #ffffff; /* 纯白色 */
+            color: #ffffff;
             text-shadow: 0 2px 8px rgba(0,0,0,0.6);
             font-weight: 700;
             letter-spacing: 2px;
@@ -42,15 +42,15 @@
             max-width: 800px;
             text-align: center;
             line-height: 1.6;
-            color: #f1c40f; /* 金黄色 */
+            color: #f1c40f;
             text-shadow: 0 1px 3px rgba(0,0,0,0.5);
             animation: slideUp 1s ease-in-out;
         }
         
         #enter-btn {
             padding: 15px 40px;
-            background-color: #f1c40f; /* 金黄色 */
-            color: #1a5276; /* 深蓝色 */
+            background-color: #f1c40f;
+            color: #1a5276;
             border: none;
             border-radius: 50px;
             font-size: 1.3rem;
@@ -71,8 +71,8 @@
         body {
             font-family: 'Microsoft YaHei', sans-serif;
             line-height: 1.6;
-            color: #333333; /* 深灰色文字 */
-            background-color: #f5f7fa; /* 浅灰背景 */
+            color: #333333;
+            background-color: #f5f7fa;
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
@@ -92,8 +92,15 @@
             margin: 20px auto;
         }
         
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        
         h1, h2, h3, h4 {
-            color: #1a5276; /* 深蓝色标题 */
+            color: #1a5276;
         }
         
         h2 {
@@ -248,8 +255,10 @@
     <!-- 主页面内容 -->
     <div id="main-content" style="display:none;">
         <header>
+            <!-- 使用本地仓库中的logo图片，添加备用方案 -->
             <div class="logo">
-                <img src="https://via.placeholder.com/200x100/1a5276/ffffff?text=ELAU+Logo" alt="ELAU Logo">
+                <img src="images/logo.png" alt="东方文理大学校徽" 
+                     onerror="this.onerror=null;this.src='images/logo.jpg';">
             </div>
             <h1>东方文理大学 (ELAU)</h1>
             <p><em>明德至善 博学创新</em></p>
