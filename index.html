@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>东方文理大学 (ELAU)</title>
     <style>
-        /* 开始页面样式 */
+        /* 开始页面样式 - 全新设计 */
         #start-page {
             position: fixed;
             top: 0;
@@ -17,7 +17,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: white;
             z-index: 1000;
             transition: opacity 1s ease-out;
         }
@@ -28,35 +27,68 @@
         }
         
         #start-page h1 {
-            font-size: 3rem;
+            font-size: 4rem;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            color: #f9f9f9; /* 亮白色 */
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
         }
         
-        #start-page p {
-            font-size: 1.2rem;
+        #start-page .subtitle {
+            font-size: 1.5rem;
             margin-bottom: 40px;
-            max-width: 600px;
+            max-width: 800px;
             text-align: center;
             line-height: 1.6;
+            color: #f1c40f; /* 金黄色 */
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            animation: slideUp 1s ease-in-out;
         }
         
         #enter-btn {
-            padding: 12px 30px;
-            background-color: white;
-            color: #1a5276;
+            padding: 15px 40px;
+            background-color: #f1c40f; /* 金黄色 */
+            color: #1a5276; /* 深蓝色 */
             border: none;
-            border-radius: 30px;
-            font-size: 1.2rem;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            animation: pulse 2s infinite;
         }
         
         #enter-btn:hover {
-            background-color: #f1c40f;
+            background-color: #f39c12;
             transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
         
         /* 主页面样式 */
@@ -160,10 +192,10 @@
     </style>
 </head>
 <body>
-    <!-- 开始页面 -->
+    <!-- 全新设计的开始页面 -->
     <div id="start-page">
-        <h1>欢迎来到东方文理大学</h1>
-        <p>探索千年学府的智慧传承，开启火星新校区的未来之旅</p>
+        <h1>东方文理大学</h1>
+        <p class="subtitle">探索千年学府的智慧传承，开启火星新校区的未来之旅</p>
         <button id="enter-btn">进入官网</button>
     </div>
 
@@ -295,7 +327,7 @@
                 <h3>本科招生</h3>
                 <p><strong>2025年本科招生计划：</strong></p>
                 <ul>
-                    <li>招生人数：1,200人</li>
+                    <li>招生人数：3,200人</li>
                     <li>招生批次：第一批次</li>
                     <li>特色项目：
                         <ul>
@@ -319,14 +351,13 @@
                 <h3>硕士研究生招生</h3>
                 <p><strong>2025年硕士招生计划：</strong></p>
                 <ul>
-                    <li>招生人数：500人</li>
-                    <li>招生方式：推荐免试、全球统考</li>
+                    <li>招生人数：1,500人</li>
+                    <li>招生方式：推荐免试、全国统考</li>
                     <li>学习年限：2-3年</li>
                     <li>特色项目：
                         <ul>
                             <li>国际联合培养硕士项目</li>
                             <li>产学研联合培养项目</li>
-                            <li>国际恒星武器研究项目</li>
                         </ul>
                     </li>
                 </ul>
@@ -353,7 +384,7 @@
                     <h4>硕士奖学金：</h4>
                     <ul>
                         <li>学业奖学金（覆盖学费+生活费）</li>
-                        <li>科研创新奖学金（最高50000亿）</li>
+                        <li>科研创新奖学金（最高50万）</li>
                         <li>国际交流奖学金</li>
                     </ul>
                 </div>
@@ -363,15 +394,13 @@
                 <h3>博士研究生招生</h3>
                 <p><strong>2025年博士招生计划：</strong></p>
                 <ul>
-                    <li>招生人数：100人</li>
+                    <li>招生人数：800人</li>
                     <li>招生方式：申请-考核制、硕博连读</li>
                     <li>学习年限：4-6年</li>
                     <li>特色项目：
                         <ul>
                             <li>卓越博士生培养计划</li>
                             <li>国际联合培养博士项目</li>
-                            <li>国际恒星级太空战列舰项目</li>
-                            <li>国际恒星级太空母舰及其穿越技术</li>
                         </ul>
                     </li>
                 </ul>
@@ -404,9 +433,9 @@
                 <div class="highlight">
                     <h4>博士奖学金：</h4>
                     <ul>
-                        <li>校长特别奖学金（5000万/年）</li>
+                        <li>校长特别奖学金（50万/年）</li>
                         <li>国家建设高水平大学公派研究生项目</li>
-                        <li>科研经费支持（最高999999999999亿）</li>
+                        <li>科研经费支持（最高500万）</li>
                         <li>国际会议资助</li>
                     </ul>
                 </div>
@@ -461,9 +490,6 @@
                     <li>现代化图书馆（藏书突破2亿册）</li>
                     <li>远超世界最好的体育场馆</li>
                     <li>学生智能活动中心</li>
-                    <li>学生宇宙活动中心</li>
-                    <li>学生宇宙武器操纵中心</li>
-                    <li>学生宇宙战略研究中心</li>
                 </ul>
             </div>
             <a href="#" class="back-to-top">返回顶部</a>
@@ -483,7 +509,7 @@
 
         <footer>
             <p>© 2025 东方文理大学招生办公室</p>
-            <p>最后更新：2025年9月15日</p>
+            <p>最后更新：2025年1月15日</p>
         </footer>
     </div>
 
