@@ -33,6 +33,7 @@
             text-shadow: 0 2px 8px rgba(0,0,0,0.6);
             font-weight: 700;
             letter-spacing: 2px;
+            font-family: 'SimSun', '楷体', serif;
             animation: fadeIn 1.5s ease-in-out;
         }
         
@@ -43,6 +44,7 @@
             text-align: center;
             line-height: 1.6;
             color: #f1c40f;
+            font-family: 'SimSun', '楷体', serif;
             text-shadow: 0 1px 3px rgba(0,0,0,0.5);
             animation: slideUp 1s ease-in-out;
         }
@@ -55,12 +57,13 @@
             border-radius: 50px;
             font-size: 1.3rem;
             font-weight: bold;
+            font-family: 'SimSun', '楷体', serif;
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             animation: pulse 2s infinite;
         }
-        
+
         /* 主頁樣式 */
         body {
             font-family: 'SimSun', '宋体', serif;
@@ -191,7 +194,10 @@
     <!-- 主頁 -->
     <div id="main-content" style="display:none;">
         <header>
-            <img src="images/logo.png" alt="東方文理大學徽章" class="logo">
+            <div class="logo">
+                <img src="images/logo.png" alt="東方文理大學徽章" 
+                     onerror="this.onerror=null;this.src='images/logo.jpg';">
+            </div>
             <h1>東方文理大學 (ELAU)</h1>
             <p><em>明德至善 博學創新</em></p>
         </header>
@@ -372,6 +378,7 @@
 
         <footer>
             <p>© 乙巳年 東方文理大學招賢處</p>
+            <p>最後更新：乙巳年臘月</p>
         </footer>
     </div>
 
