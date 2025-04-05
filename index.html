@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>東方文理大學 (ELAU)</title>
     <style>
-        /* 始頁樣式 */
+        /* 始頁樣式 - 玄青為底配素文 */
         #start-page {
             position: fixed;
             top: 0;
@@ -33,7 +33,6 @@
             text-shadow: 0 2px 8px rgba(0,0,0,0.6);
             font-weight: 700;
             letter-spacing: 2px;
-            font-family: 'SimSun', '楷体', serif;
             animation: fadeIn 1.5s ease-in-out;
         }
         
@@ -44,7 +43,6 @@
             text-align: center;
             line-height: 1.6;
             color: #f1c40f;
-            font-family: 'SimSun', '楷体', serif;
             text-shadow: 0 1px 3px rgba(0,0,0,0.5);
             animation: slideUp 1s ease-in-out;
         }
@@ -57,19 +55,24 @@
             border-radius: 50px;
             font-size: 1.3rem;
             font-weight: bold;
-            font-family: 'SimSun', '楷体', serif;
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             animation: pulse 2s infinite;
         }
+        
+        #enter-btn:hover {
+            background-color: #f39c12;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
 
-        /* 主頁樣式 */
+        /* 正文樣式 - 素底玄文 */
         body {
-            font-family: 'SimSun', '宋体', serif;
-            line-height: 1.8;
-            color: #333;
-            background-color: #f9f6ee;
+            font-family: 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #f5f7fa;
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
@@ -78,11 +81,10 @@
         header {
             text-align: center;
             margin-bottom: 30px;
-            background-color: #fffef7;
+            background-color: #ffffff;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            border: 1px solid #e0d6b9;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         .logo {
@@ -90,15 +92,20 @@
             margin: 20px auto;
         }
         
-        h1, h2, h3 {
-            color: #8b4513;
-            font-weight: normal;
-            font-style: italic;
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4 {
+            color: #1a5276;
         }
         
         h2 {
-            border-bottom: 1px solid #8b4513;
-            padding-bottom: 5px;
+            border-bottom: 2px solid #1a5276;
+            padding-bottom: 8px;
             margin-top: 40px;
         }
         
@@ -106,57 +113,91 @@
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
-            border: 1px solid #d4c9a8;
+            background-color: #ffffff;
         }
         
         th, td {
-            border: 1px solid #d4c9a8;
-            padding: 10px;
+            border: 1px solid #e0e0e0;
+            padding: 12px;
             text-align: left;
         }
         
         th {
-            background-color: #f0e6cc;
-            color: #5a4a3a;
+            background-color: #1a5276;
+            color: #ffffff;
         }
         
         .nav {
-            background-color: #f5f0e1;
-            padding: 15px;
-            border-radius: 5px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
             margin-bottom: 30px;
-            border: 1px solid #d4c9a8;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         
         .nav a {
-            margin-right: 15px;
+            margin-right: 20px;
             text-decoration: none;
-            color: #8b4513;
+            color: #1a5276;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav a:hover {
+            color: #f39c12;
+            text-decoration: none;
         }
         
         .back-to-top {
-            display: block;
-            text-align: right;
-            margin-top: 20px;
+            display: inline-block;
+            background-color: #1a5276;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
             font-size: 0.9em;
-            color: #8b4513;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        
+        .back-to-top:hover {
+            background-color: #f39c12;
         }
         
         footer {
             text-align: center;
             margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #d4c9a8;
+            padding: 30px 0;
+            border-top: 1px solid #e0e0e0;
             font-size: 0.9em;
-            color: #666;
+            color: #666666;
+            background-color: #ffffff;
+            border-radius: 8px;
         }
         
         .highlight {
-            background-color: #fffef7;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #f1c40f;
+        }
+        
+        .degree-program {
+            margin-bottom: 40px;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .requirements {
+            background-color: #eaf2f8;
             padding: 20px;
-            border-radius: 5px;
-            margin: 20px 0;
-            border: 1px solid #e0d6b9;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #3498db;
         }
         
         /* 動畫效果 */
@@ -181,21 +222,42 @@
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
+        
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            #start-page h1 {
+                font-size: 2.5rem;
+            }
+            
+            #start-page .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .nav a {
+                display: block;
+                margin: 10px 0;
+            }
+            
+            table {
+                font-size: 0.9em;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- 始頁 -->
     <div id="start-page">
         <h1>東方文理大學</h1>
-        <p class="subtitle">探千年學府之智，啓火星新庠之程</p>
-        <button id="enter-btn">入我庠門</button>
+        <p class="subtitle">承千年學府之智，啟火星新域之程</p>
+        <button id="enter-btn">入我庠序</button>
     </div>
 
-    <!-- 主頁 -->
+    <!-- 正文 -->
     <div id="main-content" style="display:none;">
         <header>
+            <!-- 用本地圖庫之徽記，備他案 -->
             <div class="logo">
-                <img src="images/logo.png" alt="東方文理大學徽章" 
+                <img src="images/logo.png" alt="東方文理大學徽記" 
                      onerror="this.onerror=null;this.src='images/logo.jpg';">
             </div>
             <h1>東方文理大學 (ELAU)</h1>
@@ -204,143 +266,277 @@
 
         <div class="nav">
             <h2>速覽</h2>
-            <a href="#intro">學府簡介</a>
-            <a href="#history">沿革志</a>
-            <a href="#disciplines">學科列</a>
-            <a href="#admission">招賢榜</a>
+            <a href="#intro">學府概略</a>
+            <a href="#history">沿革紀年</a>
+            <a href="#disciplines">學科建置</a>
+            <a href="#admission">招賢納士</a>
             <a href="#campus">庠序生活</a>
-            <a href="#contact">通聯</a>
+            <a href="#contact">通聯吾儕</a>
         </div>
 
         <section id="intro">
-            <h2>學府簡介</h2>
-            <p>東方文理大學(ELAU)肇建於宋紹興十五年(1145年)，乃綜合研究型學府。今庠序坐落火星海東市，占地二億餘畝，在籍生徒二萬五千餘。</p>
+            <h2>學府概略</h2>
+            <p>東方文理大學(ELAU)肇建於宋紹興十五年正月初四（西元一一四五年一月四日），乃綜合研習之高等學府。今坐落火星海東城，佔地十一萬四千五百一十四畝，現有生徒十一萬四千五百一十四人。</p>
             
             <div class="highlight">
-                <h3>辦學要旨：</h3>
+                <h3>治學特色：</h3>
                 <ul>
-                    <li>🎓 文理兼修</li>
-                    <li>🌍 融貫中西</li>
-                    <li>🔬 格物致知</li>
+                    <li>🎓 文理兼修，經世致用</li>
+                    <li>🌍 融貫中西，放眼寰宇</li>
+                    <li>🔬 格物致知，創新實踐</li>
                 </ul>
             </div>
-            <a href="#" class="back-to-top">返卷首</a>
+            <a href="#" class="back-to-top">返頂</a>
         </section>
 
         <section id="history">
-            <h2>沿革志</h2>
+            <h2>沿革紀年</h2>
             <table>
                 <tr>
                     <th>紀年</th>
                     <th>大事記</th>
                 </tr>
                 <tr>
-                    <td>1145</td>
-                    <td>創庠，初名"東海文理書院"</td>
+                    <td>紹興十五年（1145）</td>
+                    <td>草創，初號"東海文理書院"</td>
                 </tr>
                 <tr>
-                    <td>1234</td>
-                    <td>遭兵燹，原址盡毀</td>
+                    <td>端平元年（1234）</td>
+                    <td>遭兵燹之厄，舊址盡毀</td>
                 </tr>
                 <tr>
-                    <td>1451</td>
+                    <td>景泰二年（1451）</td>
                     <td>遷於太平洋島嶼</td>
                 </tr>
                 <tr>
-                    <td>1888</td>
+                    <td>光緒十四年（1888）</td>
                     <td>拿破崙列為傑出門生</td>
                 </tr>
                 <tr>
-                    <td>1937</td>
+                    <td>民國二十六年（1937）</td>
                     <td>抗戰西遷，弦歌不輟</td>
                 </tr>
                 <tr>
-                    <td>1952</td>
-                    <td>院系調整，更名"東方文理學院"</td>
+                    <td>民國四十一年（1952）</td>
+                    <td>院系重整，更名"東方文理學院"</td>
                 </tr>
                 <tr>
-                    <td>1995</td>
+                    <td>民國八十四年（1995）</td>
                     <td>升格為"東方文理大學"</td>
                 </tr>
                 <tr>
-                    <td>2010</td>
-                    <td>入選"雙一流"建設高校</td>
+                    <td>民國九十九年（2010）</td>
+                    <td>入選"雙一流"高等學府</td>
                 </tr>
                 <tr>
-                    <td>2019</td>
-                    <td>遷火星新庠，建海東城</td>
+                    <td>民國一百零八年（2019）</td>
+                    <td>徙火星新址，建海東城</td>
                 </tr>
                 <tr>
-                    <td>2025</td>
-                    <td>諾獎得主凡一千一百四十五位</td>
+                    <td>民國一百一十四年（2025）</td>
+                    <td>諾獎得主凡一千一百四十五人</td>
                 </tr>
             </table>
-            <a href="#" class="back-to-top">返卷首</a>
+            <a href="#" class="back-to-top">返頂</a>
         </section>
 
         <section id="disciplines">
-            <h2>學科列</h2>
-            <h3>顯學門類</h3>
+            <h2>學科建置</h2>
+            <h3>優勢學群</h3>
             
             <div class="highlight">
-                <h4>1. 人文之學</h4>
+                <h4>一、人文學部</h4>
                 <ul>
                     <li>國學研究院</li>
                     <li>異邦語文</li>
-                    <li>史乘考古</li>
-                    <li>宇宙史學</li>
+                    <li>史學考古</li>
+                    <li>宇宙史乘</li>
                 </ul>
             </div>
             
             <div class="highlight">
-                <h4>2. 格致之學</h4>
+                <h4>二、理學與工藝</h4>
                 <ul>
-                    <li>數術應用</li>
+                    <li>算學與應用</li>
                     <li>環境科學</li>
-                    <li>人工智術</li>
-                    <li>火箭營造</li>
-                    <li>太空學</li>
-                    <li>太空農學</li>
+                    <li>人工智慧</li>
+                    <li>火器建造</li>
+                    <li>太空之學</li>
+                    <li>太空農藝</li>
                 </ul>
             </div>
             
             <div class="highlight">
-                <h4>3. 藝文之道</h4>
+                <h4>三、藝文與設計</h4>
                 <ul>
-                    <li>數碼媒體</li>
-                    <li>樂舞演藝</li>
+                    <li>數位丹青</li>
+                    <li>樂舞演繹</li>
                     <li>視覺傳達</li>
                 </ul>
             </div>
-            <a href="#" class="back-to-top">返卷首</a>
+            <a href="#" class="back-to-top">返頂</a>
         </section>
 
         <section id="admission">
-            <h2>招賢榜</h2>
+            <h2>招賢納士</h2>
             
-            <div class="highlight">
-                <h3>乙巳年(2025)招生簡章</h3>
+            <div class="degree-program">
+                <h3>本科招賢</h3>
+                <p><strong>民國一百一十四年（2025）本科招賢令：</strong></p>
                 <ul>
-                    <li>招賢人數：三千二百</li>
-                    <li>招考批次：甲科</li>
+                    <li>員額：一千二百人</li>
+                    <li>批次：甲等</li>
                     <li>特色項目：
                         <ul>
-                            <li>"啓明"實驗齋</li>
-                            <li>本碩博貫通制</li>
+                            <li>"啟明"實驗班</li>
+                            <li>本碩博貫通之制</li>
+                            <li>星槎駕駛免費習藝</li>
                         </ul>
                     </li>
                 </ul>
                 
                 <div class="highlight">
-                    <h4>獎學金制：</h4>
+                    <h4>本科獎勵：</h4>
                     <ul>
-                        <li>新生獎學金（高至五百金）</li>
-                        <li>課業優異獎（高至二百萬金）</li>
-                        <li>專項競技獎（高至二百億金）</li>
+                        <li>新生獎（至高五百金）</li>
+                        <li>學優獎（至高二百萬金）</li>
+                        <li>競技獎（至高二百億金）</li>
                     </ul>
                 </div>
             </div>
-            <a href="#" class="back-to-top">返卷首</a>
+            
+            <div class="degree-program">
+                <h3>碩士招賢</h3>
+                <p><strong>民國一百一十四年（2025）碩士招賢令：</strong></p>
+                <ul>
+                    <li>員額：五百人</li>
+                    <li>方式：薦舉免試、統考</li>
+                    <li>年限：二至三載</li>
+                    <li>特色項目：
+                        <ul>
+                            <li>萬國聯合培養</li>
+                            <li>產學研共育</li>
+                            <li>植物培育</li>
+                            <li>太空探索</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div class="requirements">
+                    <h4>碩士求賢條件：</h4>
+                    <ol>
+                        <li>具學士位或同等學力</li>
+                        <li>本科績等不低於三又十分之三</li>
+                        <li>經我校研試或呈GRE/GMAT之績</li>
+                        <li>英語之要（具其一）：
+                            <ul>
+                                <li>CET-6 ≥ 五百分</li>
+                                <li>TOEFL ≥ 九十分</li>
+                                <li>IELTS ≥ 六又半</li>
+                            </ul>
+                        </li>
+                        <li>副教授以上薦書二封</li>
+                        <li>研習計劃（學術碩士）</li>
+                    </ol>
+                </div>
+                
+                <div class="highlight">
+                    <h4>碩士獎勵：</h4>
+                    <ul>
+                        <li>學業獎（含學資與生活之費）</li>
+                        <li>科研創新獎（至高五萬億金）</li>
+                        <li>萬國交流獎</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="degree-program">
+                <h3>博士招賢</h3>
+                <p><strong>民國一百一十四年（2025）博士招賢令：</strong></p>
+                <ul>
+                    <li>員額：一百人</li>
+                    <li>方式：申請-考核制、碩博連讀</li>
+                    <li>年限：四至六載</li>
+                    <li>特色項目：
+                        <ul>
+                            <li>卓越博士養成</li>
+                            <li>萬國聯合培養</li>
+                            <li>萬國聯合天宮</li>
+                            <li>恆星級星艦研造</li>
+                            <li>恆星級兵器研造</li>
+                            <li>恆星級戰略艦</li>
+                            <li>強互作用力宇宙探測</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div class="requirements">
+                    <h4>博士求賢條件：</h4>
+                    <ol>
+                        <li>具碩士位或同等學力（優異學士可直博）</li>
+                        <li>碩士績等不低於三又十分之三</li>
+                        <li>科研之要（具其一）：
+                            <ul>
+                                <li>SCI/SSCI/A&HCI論文至少一</li>
+                                <li>核心期刊論文至少二</li>
+                                <li>專利至少三</li>
+                                <li>其他相當之成果</li>
+                            </ul>
+                        </li>
+                        <li>英語之要（具其一）：
+                            <ul>
+                                <li>CET-6 ≥ 五百五十分</li>
+                                <li>TOEFL ≥ 九十五分</li>
+                                <li>IELTS ≥ 八分</li>
+                            </ul>
+                        </li>
+                        <li>教授薦書三封</li>
+                        <li>研習計劃書（不少於五千言）</li>
+                        <li>經院系綜合考核</li>
+                    </ol>
+                </div>
+                
+                <div class="highlight">
+                    <h4>博士獎勵：</h4>
+                    <ul>
+                        <li>校長特獎（五千萬金/年）</li>
+                        <li>萬國高水平大學公派</li>
+                        <li>科研經費（至高九萬九千九百九十九億九千九百九十九萬九千九百九十九金）</li>
+                        <li>萬國會議資助</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="highlight">
+                <h3>本屆招賢時序</h3>
+                <table>
+                    <tr>
+                        <th>項目</th>
+                        <th>始日</th>
+                        <th>末日</th>
+                        <th>考核時</th>
+                    </tr>
+                    <tr>
+                        <td>本科</td>
+                        <td>民國一百一十四年三月朔（2025.3.1）</td>
+                        <td>民國一百一十四年三月晦（2025.3.31）</td>
+                        <td>民國一百一十四年四月初一（2025.4.1）</td>
+                    </tr>
+                    <tr>
+                        <td>碩士</td>
+                        <td>民國一百一十三年九月朔（2024.9.1）</td>
+                        <td>民國一百一十三年九月晦（2024.9.30）</td>
+                        <td>民國一百一十三年十月（2024.10）</td>
+                    </tr>
+                    <tr>
+                        <td>博士</td>
+                        <td>民國一百一十三年十月朔（2024.10.1）</td>
+                        <td>民國一百一十三年臘月晦（2024.12.31）</td>
+                        <td>民國一百一十四年正月至三月（2025.2-3）</td>
+                    </tr>
+                </table>
+            </div>
+            <a href="#" class="back-to-top">返頂</a>
         </section>
 
         <section id="campus">
@@ -350,49 +546,65 @@
                 <ul>
                     <li>百年講壇</li>
                     <li>萬國文化節</li>
-                    <li>科技創新賽</li>
+                    <li>科技創新大比</li>
+                    <li>星槎駕藝大比</li>
+                    <li>兵器運用大比</li>
+                    <li>兵器與星槎創新大比</li>
                 </ul>
             </div>
             
             <div class="highlight">
-                <h3>庠舍設施：</h3>
+                <h3>生活設施：</h3>
                 <ul>
-                    <li>現代藏書樓（典藏逾二億卷）</li>
-                    <li>冠絕寰宇之演武場</li>
-                    <li>生徒智能活動中心</li>
+                    <li>現代藏書樓（典藏二億卷）</li>
+                    <li>寰宇最佳演武場</li>
+                    <li>學子智能活動中心</li>
+                    <li>學子宇宙體驗中心</li>
+                    <li>恆星級星艦駕考中心</li>
+                    <li>宇宙星槎駕習中心</li>
+                    <li>恆星級天兵實驗場</li>
                 </ul>
             </div>
-            <a href="#" class="back-to-top">返卷首</a>
+            <a href="#" class="back-to-top">返頂</a>
         </section>
 
         <section id="contact">
-            <h2>通聯</h2>
+            <h2>通聯吾儕</h2>
             <div class="highlight">
-                <p>📞 招賢熱線：400-160-1958</p>
-                <p>📧 飛鴿傳書：<a href="mailto:admission@elau.edu.cn">admission@elau.edu.cn</a></p>
-                <p>🌐 庠門網站：<a href="http://www.elau.edu.cn" target="_blank">www.elau.edu.cn</a></p>
-                <p>📍 庠址：火星海東市文昌區大學路一號</p>
+                <p>📞 招賢熱線：四零零一六零一九五八</p>
+                <p>📧 飛鴿：<a href="mailto:admission@elau.edu.cn">admission@elau.edu.cn</a></p>
+                <p>🌐 官驛：<a href="http://www.elau.edu.cn" target="_blank">www.elau.edu.cn</a></p>
+                <p>📍 所在：火星海東城文昌區大學路一號</p>
+                <p>🕒 招賢處值時：月曜至金曜 辰正至酉正</p>
             </div>
-            <a href="#" class="back-to-top">返卷首</a>
+            <a href="#" class="back-to-top">返頂</a>
         </section>
 
         <footer>
-            <p>© 乙巳年 東方文理大學招賢處</p>
-            <p>最後更新：乙巳年臘月</p>
+            <p>© 民國一百一十四年 東方文理大學招賢處</p>
+            <p>最後更新：民國一百一十四年四月初五（2025.4.5）</p>
         </footer>
     </div>
 
     <script>
-        // 入庠門按鈕
+        // 點擊入庠序之效
         document.getElementById('enter-btn').addEventListener('click', function() {
+            // 淡出始頁
             document.getElementById('start-page').classList.add('hidden');
+            
+            // 顯正文
             document.getElementById('main-content').style.display = 'block';
+            
+            // 滾至頂
             window.scrollTo(0, 0);
+            
+            // 三息後盡去始頁（可選）
             setTimeout(function() {
                 document.getElementById('start-page').style.display = 'none';
             }, 1000);
         });
         
+        // 若士子直刷新頁，檢視曾入正文否
         window.addEventListener('load', function() {
             if(window.location.hash === '#entered') {
                 document.getElementById('start-page').style.display = 'none';
